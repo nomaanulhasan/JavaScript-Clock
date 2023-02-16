@@ -1,0 +1,235 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font: 700 16px / normal 'Lora', serif;
+}
+
+body {
+  background: linear-gradient(to right, #2fc5ba, #62c6c9, #2fc5ba);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.clock {
+  --spacing: 10vmin;
+  --size: 75vmin;
+  --dark: #222;
+
+  border: calc(var(--spacing) / 3) solid black;
+  background-color: rgb(255 255 255 / 0.8);
+  padding: calc(var(--spacing) / 2);
+  box-shadow: inset 40px 40px 90px rgb(0 0 0 / 0.2),
+    inset 10px 10px 30px rgb(0 0 0 / 0.5), 20px 20px 30px rgb(0 0 0 / 0.4),
+    40px 40px 60px rgb(0 0 0 / 0.4);
+  height: var(--size);
+  width: var(--size);
+  position: relative;
+  border-radius: 50%;
+}
+
+.clock:before {
+  border: calc(var(--spacing) / 6) solid white;
+  background: transparent;
+  position: absolute;
+  border-radius: 50%;
+  display: block;
+  content: '';
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.clock:after {
+  box-shadow: -6px -6px 1.5vmin rgb(255 255 255 / 0.8);
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  height: 104%;
+  width: 104%;
+  content: '';
+  left: -2%;
+  top: -2%;
+}
+
+.clock .number {
+  --rotation: 0;
+
+  text-shadow: 2px 2px 3px rgb(0 0 0 / 0.5);
+  height: calc(100% - var(--spacing));
+  width: calc(100% - var(--spacing));
+  transform: rotate(var(--rotation));
+  text-align: center;
+  position: absolute;
+  color: var(--dark);
+}
+.clock .number span {
+  --rotation: 0;
+  font-size: calc(var(--spacing) / 2);
+  transform: rotate(var(--rotation));
+  display: block;
+}
+
+.clock .number:nth-child(1) {
+  --rotation: 30deg;
+}
+.clock .number:nth-child(1) span {
+  --rotation: -30deg;
+}
+.clock .number:nth-child(2) {
+  --rotation: 60deg;
+}
+.clock .number:nth-child(2) span {
+  --rotation: -60deg;
+}
+.clock .number:nth-child(3) {
+  --rotation: 90deg;
+}
+.clock .number:nth-child(3) span {
+  --rotation: -90deg;
+}
+.clock .number:nth-child(4) {
+  --rotation: 120deg;
+}
+
+.clock .number:nth-child(4) span {
+  --rotation: -120deg;
+}
+.clock .number:nth-child(5) {
+  --rotation: 150deg;
+}
+
+.clock .number:nth-child(5) span {
+  --rotation: -150deg;
+}
+.clock .number:nth-child(6) {
+  --rotation: 180deg;
+}
+
+.clock .number:nth-child(6) span {
+  --rotation: -180deg;
+}
+.clock .number:nth-child(7) {
+  --rotation: 210deg;
+}
+
+.clock .number:nth-child(7) span {
+  --rotation: -210deg;
+}
+.clock .number:nth-child(8) {
+  --rotation: 240deg;
+}
+
+.clock .number:nth-child(8) span {
+  --rotation: -240deg;
+}
+.clock .number:nth-child(9) {
+  --rotation: 270deg;
+}
+
+.clock .number:nth-child(9) span {
+  --rotation: -270deg;
+}
+.clock .number:nth-child(10) {
+  --rotation: 300deg;
+}
+
+.clock .number:nth-child(10) span {
+  --rotation: -300deg;
+}
+.clock .number:nth-child(11) {
+  --rotation: 330deg;
+}
+
+.clock .number:nth-child(11) span {
+  --rotation: -330deg;
+}
+
+.clock .hand {
+  --rotation: 0;
+
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  border: 1px solid white;
+  border-top-right-radius: var(--spacing);
+  border-top-left-radius: var(--spacing);
+  transform-origin: bottom;
+  position: absolute;
+  z-index: 10;
+  bottom: 50%;
+  left: 50%;
+}
+
+.hands .second {
+  width: calc(var(--spacing) / 12);
+  background-color: red;
+  height: 35%;
+}
+
+.hands .second::before {
+  transform: translate(-1.25vmin, 0.75vmin);
+  top: calc(100% - var(--spacing) / 4);
+  height: calc(var(--spacing) / 3);
+  width: calc(var(--spacing) / 3);
+  background-color: red;
+  position: absolute;
+  border-radius: 50%;
+  display: block;
+  content: '';
+  z-index: 20;
+  left: 0;
+}
+.hands .second::after {
+  transform: translate(-1.25vmin, 0.75vmin);
+  top: calc(100% - var(--spacing) / 5.5);
+  height: calc(var(--spacing) / 5);
+  width: calc(var(--spacing) / 5);
+  left: calc(var(--spacing) / 16);
+  border: 0.5vmin solid white;
+  background-color: var(--dark);
+  position: absolute;
+  border-radius: 50%;
+  display: block;
+  content: '';
+  z-index: 21;
+}
+
+.hands .minute {
+  width: calc(var(--spacing) / 6);
+  background-color: var(--dark);
+  height: 32%;
+}
+
+.hands .minute::after {
+  border-radius: var(--spacing);
+  background-color: white;
+  position: absolute;
+  display: block;
+  content: '';
+  z-index: 20;
+  height: 80%;
+  width: 20%;
+  left: 40%;
+  top: 8%;
+}
+
+.hands .hour {
+  width: calc(var(--spacing) / 4);
+  background-color: var(--dark);
+  height: 26%;
+}
+.hands .hour::after {
+  border-radius: var(--spacing);
+  background-color: white;
+  position: absolute;
+  display: block;
+  content: '';
+  z-index: 20;
+  height: 80%;
+  width: 20%;
+  left: 40%;
+  top: 8%;
+}
