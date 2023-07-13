@@ -29,10 +29,10 @@ Contributions to the project are welcome. If you find any issues or have suggest
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/nomaanulhasan/JavaScript-Clock/LICENSE).
+This project is licensed under the [MIT License](/LICENSE).
 
 ## Acknowledgements
 
-The Clock application is inspired by various online examples and tutorials. Special thanks to the contributors of the following resources:
+The Clock application is inspired by youtube tutorials by WebDevSimplified. I am very thankful to WebDevSimplified for the following resource:
 
 - [WebDevSimplified: JavaScript-Clock](https://github.com/WebDevSimplified/JavaScript-Clock)
