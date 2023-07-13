@@ -33,6 +33,6 @@ This project is licensed under the [MIT License](/LICENSE).
 
 ## Acknowledgements
 
-The Clock application is inspired by youtube tutorials by WebDevSimplified. I am very thankful to WebDevSimplified for the following resource:
+The Clock application is inspired by youtube tutorials by [WebDevSimplified](https://www.youtube.com/@WebDevSimplified). I am very thankful to WebDevSimplified for the following resource:
 
 - [WebDevSimplified: JavaScript-Clock](https://github.com/WebDevSimplified/JavaScript-Clock)
